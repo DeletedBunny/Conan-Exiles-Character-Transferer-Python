@@ -98,7 +98,7 @@ class UiCharacterTransferer:
         progressLabel.config(text="Finished")
 
     def init_common_components(self):
-        self.uiRoot.geometry("800x600")
+        self.uiRoot.geometry("1000x600")
         self.uiRoot.title("Character Transferer")
         self.uiFrameRoot = Frame(self.uiRoot)
         self.uiFrameRoot.grid(row=1, columnspan=2)
@@ -162,7 +162,7 @@ class UiCharacterTransferer:
         self.properties[0][num].remove(chosen_property)
 
     def page_1_accounts(self):
-        self.label.config(text="Pick the account pairs exiles/siptah that were detected which you would like transferred.")
+        self.label.config(text="Pick the account pairs exiles/siptah that were detected which you would like transferred.\nExiles|Siptah (id, name, level)")
         user_id_pairs_and_names = self.databaseHelper.get_user_id_pairs()
 
         for user in user_id_pairs_and_names:
